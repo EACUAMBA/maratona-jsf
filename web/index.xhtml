@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <f:view>
+        <div style="text-align: center">
+            <h:outputLabel value="Bem vindo ao Maratona JSF"/>
+        </div>
+        <hr/>
+        <h:outputLabel value="#{estudanteRegistrarBean.nome}"/>
+        <br/>
+        <h:outputText value="Voce #{estudanteRegistrarBean.nota1 gt 9.5 ? 'Passou de classe' : 'Reprovou'} na disciplina de Math"/>
+    </f:view>
+</h:body>
+</html>
