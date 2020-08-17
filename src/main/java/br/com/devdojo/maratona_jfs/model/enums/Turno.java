@@ -1,5 +1,6 @@
 package br.com.devdojo.maratona_jfs.model.enums;
 
-public enum turnos {
+public enum Turno {
     MATUTINO, VESPERTINO, NOTURNO
+
 }

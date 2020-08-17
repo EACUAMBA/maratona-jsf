@@ -1,5 +1,7 @@
 package br.com.devdojo.maratona_jfs.model;
 
+import br.com.devdojo.maratona_jfs.model.enums.Turno;
+
 import javax.inject.Named;
 import java.io.Serializable;
 
@@ -11,6 +13,15 @@ public class Estudante implements Serializable {
     private double nota1 = 12;
     private double nota2 = 15;
     private double nota3 = 5;
+    private Turno turno = Turno.NOTURNO;
+
+    public Turno getTurno() {
+        return turno;
+    }
+
+    public void setTurno(Turno turno) {
+        this.turno = turno;
+    }
 
     public int getId() {
         return id;

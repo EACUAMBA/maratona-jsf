@@ -4,16 +4,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 <h:body>
+    <p:importEnum type="br.com.devdojo.maratona_jfs.model.enums.Turno" var="Turno" allSuffix="ALL_ENUM_VALUES" />
     <f:view>
         <div style="text-align: center">
             <h:outputLabel value="Bem vindo ao Maratona JSF"/>
         </div>
         <hr/>
-        <h:outputLabel value="#{estudanteRegistrarBean.nome}"/>
+        <h:outputLabel value="#{estudanteRegistrarBean.estudante.nome}"/>
         <br/>
-        <h:outputText value="Voce #{estudanteRegistrarBean.nota1 gt 9.5 ? 'Passou de classe' : 'Reprovou'} na disciplina de Math"/>
+        <h:outputText
+                value="Voce #{estudanteRegistrarBean.estudante.nota1 gt 9.5 ? 'Passou de classe' : 'Reprovou'} na disciplina de Math"/>
+        <br/>
+        <h:outputText value="#{estudanteRegistrarBean.estudante.turno eq Turno.VESPERTINO}"/>
+        <br/>
+        <h:outputText value="#{estudanteRegistrarBean.estudante.turno.equals(Turno.NOTURNO)}"/>
     </f:view>
 </h:body>
 </html>
